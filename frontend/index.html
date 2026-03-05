@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Cosmic Birthday - APOD NASA</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../.cursor/projects/c-Users-25012072-Desktop-NASA/assets/frontend-favicon.png"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <main class="app">
+      <header class="app-header">
+        <div class="logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">Cosmic Birthday</span>
+        </div>
+        <p class="subtitle">
+          Descubra a imagem astronômica que a NASA registrou no dia do seu aniversário.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="apod-form" class="form">
+          <label class="field">
+            <span class="field-label">Data de nascimento</span>
+            <input
+              id="birthdate"
+              type="date"
+              required
+            />
+          </label>
+          <button type="submit" class="button primary">
+            Ver imagem do meu aniversário
+          </button>
+        </form>
+
+        <div id="status" class="status hidden"></div>
+
+        <div id="result" class="result hidden">
+          <div class="result-header">
+            <div>
+              <h2 id="apod-title" class="result-title"></h2>
+              <p id="apod-date" class="result-date"></p>
+            </div>
+            <span class="chip">NASA APOD</span>
+          </div>
+
+          <div class="media-wrapper">
+            <img
+              id="apod-image"
+              class="media"
+              alt="Imagem astronômica da NASA"
+            />
+            <div id="apod-video" class="media video hidden">
+              <iframe
+                id="apod-video-frame"
+                src=""
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p id="apod-explanation" class="result-description"></p>
+
+          <div class="result-footer">
+            <p id="apod-copyright" class="credit"></p>
+            <a
+              id="apod-hd-link"
+              href="#"
+              class="button ghost small"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver em alta resolução
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="app-footer">
+        <span>Dados fornecidos pela API NASA APOD</span>
+      </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
